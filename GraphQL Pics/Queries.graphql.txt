@@ -1,0 +1,50 @@
+{
+  restaurant(id: 1) {
+    id
+    name
+    description
+    dishes {
+      name
+      price
+    }
+  }
+}
+
+
+
+{
+  restaurants {
+    id
+    name
+    description
+    dishes {
+      name
+      price
+    }
+  }
+}
+
+
+mutation {
+  setrestaurant(input: {name: "New Restaurant", description: "A brand new place"}) {
+    id
+    name
+    description
+  }
+}
+
+
+mutation {
+  deleterestaurant(id: 1) {
+    ok
+  }
+}
+
+
+mutation {
+  editrestaurant(id: 2, name: "Updated Fiorellas", description: "Updated description") {
+    id
+    name
+    description
+  }
+}
